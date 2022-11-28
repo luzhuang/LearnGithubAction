@@ -1,0 +1,27 @@
+{
+  "name": "react-oasis",
+  "version": "0.0.0",
+  "module": "dist/react-oasis.mjs",
+  "browser": "dist/react-oasis.umd.js",
+  "types": "./types",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "e2e": "cypress run --browser chrome --headless",
+    "e2e:open": "cypress open"
+  },
+  "dependencies": {
+    "@oasis-engine/physics-lite": "beta",
+    "oasis-engine": "beta",
+    "react": "latest",
+    "react-dom": "latest",
+    "@antv/x6":"2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-refresh": "^1.1.0",
+    "cypress": "^11.2.0",
+    "typescript": "^4",
+    "vite": "^3"
+  }
+}
