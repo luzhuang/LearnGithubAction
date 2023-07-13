@@ -8,8 +8,6 @@ const downloadDirectory = path.join(__dirname, "cypress/downloads");
 let isRunningInCommandLine = false;
 export default defineConfig({
   e2e: {
-    viewportWidth: 1200,
-    viewportHeight: 800,
     baseUrl: "http://localhost:5173",
     defaultCommandTimeout: 60000,
     setupNodeEvents(on, config) {
@@ -29,6 +27,7 @@ export default defineConfig({
         if (browser.isHeadless) {
           isRunningInCommandLine = true;
         }
+        launchOptions.args.push("--force-device-scale-factor=1");
         return launchOptions;
       }),
         on("task", {

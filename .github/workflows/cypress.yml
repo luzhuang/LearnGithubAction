@@ -26,6 +26,7 @@ jobs:
         start: npm run dev
         wait-on: 'http://localhost:5173'
         wait-on-timeout: 120 
+        browser: chrome
     - name: Upload Diff
       if: always()
       uses: actions/upload-artifact@v3
