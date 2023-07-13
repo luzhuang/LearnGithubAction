@@ -10,7 +10,7 @@ export default defineConfig({
   e2e: {
     viewportWidth: 1200,
     viewportHeight: 800,
-    baseUrl: "http://localhost:5174",
+    baseUrl: "http://localhost:5173",
     defaultCommandTimeout: 60000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
