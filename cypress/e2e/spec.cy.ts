@@ -1,5 +1,9 @@
 describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('http://localhost:5173/')
-  })
+  it('Animator', () => {
+    cy.screenShotOnly(
+      "Animator",
+      "animator-play",
+      100,
+      0.3
+    );  })
 })
