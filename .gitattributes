@@ -1,5 +1,1 @@
-fixtures/*.png filter=lfs diff=lfs merge=lfs -text
-fixtures/**.png filter=lfs diff=lfs merge=lfs -text
-fixtures/**/*.png filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
 cypress/fixtures/** filter=lfs diff=lfs merge=lfs -text
