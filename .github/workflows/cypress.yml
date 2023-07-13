@@ -26,6 +26,11 @@ jobs:
         start: npm run dev
         wait-on: 'http://localhost:5173'
         wait-on-timeout: 120 
+    - name: Upload Diff
+      uses: actions/upload-artifact@v3
+      with:
+        name: cypress-diff
+        path: cypress/diff/
     - name: Upload Videos
       uses: actions/upload-artifact@v3
       with:
