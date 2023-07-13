@@ -21,14 +21,13 @@ export default defineConfig({
         if (fs.existsSync("cypress/diff")) {
           fs.rmdirSync("cypress/diff", { recursive: true });
         }
-        if (browser.family === "chromium") {
+        if (browser.name === "chrome") {
           launchOptions.preferences.default["download"] = {
             default_directory: downloadDirectory
           };
           if (browser.isHeadless) {
             isRunningInCommandLine = true;
           }
-          // launchOptions.args.push("--force-device-scale-factor=2");
           return launchOptions;
         }
       }),
