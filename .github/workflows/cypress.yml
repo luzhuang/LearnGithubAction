@@ -27,11 +27,13 @@ jobs:
         wait-on: 'http://localhost:5173'
         wait-on-timeout: 120 
     - name: Upload Diff
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: cypress-diff
         path: cypress/diff/
     - name: Upload Videos
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: cypress-videos
